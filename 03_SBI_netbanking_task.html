@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI netbanking task</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .heading{
+            background-color: #E1EEF2;
+            padding: 10px;
+        }
+        .heading h3{
+            color: #1B75BC;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="heading">
+       <h3> User Driven Registration - New User </h3>
+    </div>
+
+    <form>
+    <table style="width: 100%;" cellspacing="40px">
+
+        <tr>
+            <td colspan="3">
+                <small style="color: red;"> <i> Mandatory fields are marked with an asterisk(*) </i> </small>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Account Number <span style="color: red;">*</span>
+            </td>
+            <td>
+                <input type="text" pattern="[0-9]{9,18}" title="9 to 18 digits required" required>
+            </td>
+            <td>
+               <small>(Account Number is available in your passbook and/or statement of account)</small>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                CIF Number <span style="color: red;">*</span>
+            </td>
+            <td>
+                <input type="text" pattern="[0-9]{9,11}" title="9 to 11 digits required" required>
+            </td>
+            <td>
+               <small>(CIF Number is available in your passbook and/or statement of account)</small>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Branch Code <span style="color: red;">*</span>
+            </td>
+            <td>
+                <input type="text" pattern="[A-Z]{4}0[A-Z0-9]{6}" title="4 capital alphabets, 0, 6 capital alphabets or digits required" required>
+            </td>
+            <td>
+                <button style="border: none; background-color: #F89611; color: white; padding: 10px; border-radius: 5px; font-size: 15px;">
+                    Get Branch Name
+                </button>
+               <small>(Please enter 5 digit brance code)</small>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Country 
+            </td>
+            <td>
+                <select>
+                    <option hidden>--- Select Country ---</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>Pakistan</option>
+                    <option>Banglades</option>
+                </select>
+            </td>
+            <td>
+               <small>For canada, choose USA</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Registered mobile Number <span style="color: red;">*</span>
+            </td>
+            <td>
+                <select>
+                    <option hidden></option>
+                    <option>+91</option>
+                    <option>+1</option>
+                    <option>+92</option>
+                    <option>+880</option>
+                </select>
+                <input type="text" pattern="[0-9]{10}" required title="10 digit required">
+            </td> 
+            <td>
+                <small>please enter mobile number Registered with bank</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Facility Required <span style="color: red;">*</span>
+            </td>
+            <td>
+                <select>
+                    <option hidden> --- Select Transection Rights ---</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Enter the text as show in the image <span style="color: red;">*</span>
+            </td>
+            <td>
+              <input type="text" pattern="C7DD7" required>
+              <span style="border: 1px solid black; background-color: #D9FFF6;">C7DD7</span>
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="3">
+                <input type="submit" style="color: white; background-color: #F89611; padding: 5px; border: none; border-radius: 5px;">
+            </th>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
