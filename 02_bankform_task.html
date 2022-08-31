@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank form task</title>
+    <style>
+        .account-info{
+            display: flex; 
+            align-items: center;
+            gap: 80px;
+        }
+        .buttons{
+            display: flex; 
+            align-items: center;
+            gap: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Welcome to Simple Bank where we make banking simple!</h1>
+    <form>
+
+        <fieldset>
+            <legend>Account Info</legend>
+
+            <div class="account-info">
+
+            <div>
+            Name: <input type="text">
+            </div>
+
+            <div>
+            Account Type: <br>
+            Saving <input type="radio" name="A">
+            Checking <input type="radio" name="A">
+            </div>
+
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Transections</legend>
+
+            <div class="account-info">
+                <div>
+                    Amount: <input type="text">
+                </div>
+                <div>
+                    Transfer From: <input type="text">
+                </div>
+                <div>
+                    Transfer To: <input type="text">
+                </div>
+            </div>
+
+            <br>
+            <div class="buttons">
+                <input type="button" value="Deposit">
+                <input type="button" value="Withdraw">
+                <input type="button" value="Transfer">
+                <input type="button" value="View Transections">
+            </div>
+        </fieldset>
+
+    </form>
+
+    <fieldset>
+        <legend>View Transections</legend>
+        Name: Testuser <br>
+        Account: Saving <br>
+        Initial Balance: $1000.00
+
+        <table border="2" style="width: 70%;">
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Balance</th>
+            </tr>
+            <tr>
+                <td>Transfer To Checking</td>
+                <td>$-500.00</td>
+                <td>$500.00</td>
+            </tr>
+            <tr>
+                <td>Withdraw</td>
+                <td>$-23.33</td>
+                <td>$476.67</td>
+            </tr>
+            <tr>
+                <td>Deposit</td>
+                <td>$102.20</td>
+                <td>$578.87</td>
+            </tr>
+            <tr>
+                <td>Transfer From Checking</td>
+                <td>$234.00</td>
+                <td>$812.87</td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
+</html>
