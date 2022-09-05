@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form using table only</title>
+    <style>
+        .heading{
+            text-align: center;
+            padding: 5px 0px;
+            background: linear-gradient(to top, #65A7D8,white);
+            color: red;
+            width: 960px;
+        }
+        table{
+            background-color: #CDDFF3;
+            width: 960px;
+        }
+        .button{
+            background-color: #4988B9;
+            color: white;
+        }
+        .sub-heading{
+            color: red;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+    <h3 class="heading">Individual Registration</h3>
+    </center>
+
+
+    <center>
+
+    <form>
+    
+    <table cellspacing="15px">
+
+        <tr>
+            <td colspan="4" class="sub-heading">User Particulars</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: right;"><span>*</span> Login ID</td>
+            <td colspan="2"> <input type="email" title="ex:-xyz123@gmail.com" required> </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: right;"><span>*</span> Password</td>
+            <td colspan="2"><input type="password" required></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: right;"><span>*</span> Confirm Password</td>
+            <td colspan="2"><input type="password" required> </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" class="sub-heading">Personal Particulars</td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;"><span>*</span> Salutation</td>
+            <td>
+                <select>
+                    <option hidden>Select</option>
+                </select>
+            </td>
+            <td style="text-align: right;">
+                <span>*</span> First Name
+            </td>
+            <td>
+                <input type="text" pattern="[A-Za-z]*" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;">Middle Name</td>
+            <td>
+               <input type="text">
+            </td>
+            <td  style="text-align: right;">
+                <span>*</span> Last Name
+            </td>
+            <td>
+                <input type="text" pattern="[A-Za-z]*" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;"><span>*</span> Resident Status</td>
+            <td>
+                <select>
+                    <option hidden>Select</option>
+                </select>
+            </td>
+            <td style="text-align: right;">
+                <span>*</span> Country
+            </td>
+            <td>
+                <select>
+                    <option hidden>Select</option>
+                    <option>India</option>
+                    <option>Pakistan</option>
+                    <option>Banglades</option>
+                    <option>Afghanistan</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;"><span>*</span> Email id</td>
+            <td>
+                <input type="email" required>
+            </td>
+            <td style="text-align: right;">
+                <span>*</span> Mobile Number
+            </td>
+            <td>
+                <input type="text" pattern="[0-9]{10}" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" class="sub-heading">Account Particulars</td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;"><span>*</span> 15 Digit Account No</td>
+            <td>
+                <input type="text" pattern="[0-9]{15}" title="15 digit required" required>
+            </td>
+            <td style="text-align: right;"><span>*</span> Nick Name</td>
+            <td>
+                <input type="text" pattern="[A-Za-z]" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;"><span>*</span> Fund Transfer</td>
+            <td>
+                <select>
+                    <option hidden>Select</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" class="sub-heading">DECLARATION</td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur earum animi nobis excepturi natus mollitia ad maxime ab quod eligendi, eius, impedit deleniti doloremque! Ipsa illum architecto ab cum possimus, commodi, culpa sequi temporibus eum fugit rem repellat inventore tempora ea dignissimos reiciendis aperiam iste assumenda debitis sunt voluptates? Illo enim reprehenderit tempora eaque est soluta deleniti provident, veniam dolore esse nihil! Numquam eos, vero inventore sapiente voluptates sed sequi nobis accusantium, natus quam at maiores eius nesciunt ullam minus aspernatur nam eum odio culpa libero, facere iure quia. Aliquam sit iste ad sequi unde quod facilis totam repellendus voluptate?
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="4">
+                <input type="submit" class="button">
+                <input type="reset" class="button">
+            </th>
+        </tr>
+
+    </table>
+
+</form>
+</center>
+</body>
+</html>
