@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            background-color: #0e1af7;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .logo a{
+            text-decoration: none;
+            color: white;
+            padding-left: 40px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .menu{
+            display: flex;
+            margin-left: 900px;
+        }
+        .menu p a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdownlist {
+             display: none;
+             position: absolute;
+             background-color: #0e1af7;
+             width: 150px;
+             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        .dropdownlist a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+        }
+        .dropdown:hover .dropdownlist {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <div class="menu">
+           <p><a href="">Home</a></p>
+           <p><a href="">About</a></p>
+           <div class="dropdown">
+           <p class="service"><a href="">Services</a></p>
+           <div class="dropdownlist">
+                <a href="">Service 1</a>
+                <hr>
+                <a href="">Service 2</a>
+                <hr>
+                <a href="">Service 3</a>
+                <hr>
+                <a href="">Service 4</a>
+           </div>
+           </div>
+           <p><a href="">Contact</a></p>
+        </div>
+       
+    </div>
+
+</body>
+</html>
