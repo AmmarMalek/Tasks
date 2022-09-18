@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://kit.fontawesome.com/30fdf6eef9.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .first, .second{
+            box-shadow: 0px 0px 10px white;
+            border-radius: 20px;
+            width: 350px;
+            height: 600px;
+            padding: 20px;
+        }
+        .dot{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .dot1{
+            width: 15px;
+            height: 15px;
+            background-color: blue;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px white;
+        }
+        .dot2{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px white;
+        }
+        .title{
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .rang{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px white;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to left,blue,skyblue);
+        }
+        .rang2{
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px white;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .dollar{
+            height: 20px;
+            width: 20px;
+            padding: 2px;
+            box-shadow: 0px 0px 5px white;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+        }
+        .price{
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .des{
+            color: blue;
+            font-weight: bold;
+            font-size: 10px;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .signin{
+            color: white;
+            background: transparent;
+            box-shadow: 0px 0px 5px white;
+            border-radius: 10px;
+            padding: 8px 100px;
+            border: none;
+        }
+        .signup{
+            color: white;
+            background: linear-gradient(to right,blue,skyblue);
+            box-shadow: 0px 0px 5px white;
+            border-radius: 10px;
+            padding: 8px 100px;
+            border: none;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .arrow{
+            height: 20px;
+            width: 20px;
+            box-shadow: 0px 0px 5px white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        .fa-arrow-left{
+            color: white;
+        }
+        .headind{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .fa-ellipsis{
+            color: white;
+        }
+        .on-off{
+            box-shadow: 0px 0px 10px white;
+            width: 190px;
+            height: 370px;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 320px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .on{
+            width: 150px;
+            height: 330px;
+            border-radius: 320px;
+            padding: 5px;
+            position: relative;
+            background: linear-gradient(to right,blue,skyblue);
+        }
+        .fa-unlock-keyhole{
+            position: absolute;
+            top: 50px;
+            left: 68px;
+        }
+        .off{
+            box-shadow: 0px 0px 2px white;
+            width: 150px;
+            height: 230px;
+            border-radius: 320px;
+            position: absolute;
+            bottom: 0px;
+            background-color: black;
+            left: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+        .unlock{
+            color: white;
+            font-size: 13px;
+        }
+        .touch{
+            box-shadow: 0px 0px 10px white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo{
+            background-color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bottom{
+            box-shadow: 0px 0px 10px white;
+            border-radius: 20px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        .battery{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .battery-logo{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .half{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            background: linear-gradient(to right,blue,skyblue);
+            left: 0;
+            top: 17.5px;
+        }
+        .battery p{
+            color: white;
+        }
+        .per{
+            color: blue;
+        }
+        .fa-bolt{
+            color: white;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+
+            <div class="first">
+                <div class="dot">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                </div>
+                <h1 class="title">grow your<br>business</h1>
+                <div class="rang">
+                    <div class="rang2">
+                        <div class="dollar">
+                            $
+                        </div>
+                        <p class="price">$420.00</p>
+                        <p class="des">Earnings</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                <button class="signin">Sign In</button>
+                <button class="signup">Sign Up</button>
+                </div>
+            </div>
+
+
+            <div class="second">
+
+                <div class="header">
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <p class="headind">Main Door</p>
+                    <div class="arrow">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+
+                <div class="on-off">
+                    <div class="on">
+                        <i class="fa-solid fa-unlock-keyhole"></i>
+                    <div class="off">
+                        <p class="unlock">Unlocked</p>
+                        <div class="touch">
+                            <div class="logo">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <div class="bottom">
+                    <div class="battery">
+                        <div class="battery-logo">
+                            <i class="fa-solid fa-bolt"></i>
+                            <div class="half">
+
+                            </div>
+                        </div>
+                        <p>Battery</p>
+                    </div>
+                    <p class="per">50%</p>
+                </div>
+
+            </div>
+    </div>
+</body>
+</html>
