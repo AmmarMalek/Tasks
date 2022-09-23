@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite shoppy task 1</title>
+    <script src="https://kit.fontawesome.com/30fdf6eef9.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box{
+            height: 30px;
+            width: 30px;
+            position: relative;
+        }
+        .fb-front{
+            background-color: #3B5998;
+            height: 30px;
+            width: 30px;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            transform: rotateX(0deg);
+			transition: 1s;
+            backface-visibility: visible;
+        }
+
+        .twi-front{
+            background-color: #00ACEE;
+            height: 30px;
+            width: 30px;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            transform: rotateX(0deg);
+			transition: 1s;
+            backface-visibility: visible;
+        }
+        
+        .insta-front{
+            background-color: #F77737;
+            height: 30px;
+            width: 30px;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            transform: rotateX(0deg);
+			transition: 1s;
+            backface-visibility: visible;
+        }
+        
+        
+        .in-front{
+            background-color: #BD081C;
+            height: 30px;
+            width: 30px;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            transform: rotateX(0deg);
+			transition: 1s;
+            backface-visibility: visible;
+        }
+
+        .back{
+            background-color: white;
+            height: 30px;
+            width: 30px;
+            color: black;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+			transform: rotateX(180deg);
+			transition: 1s;
+            backface-visibility: hidden;
+        }
+        
+        
+        .box:hover .fb-front
+		{
+			transform: rotateX(180deg);
+		}
+        .box:hover .twi-front
+		{
+			transform: rotateX(180deg);
+		}.box:hover .insta-front
+		{
+			transform: rotateX(180deg);
+		}.box:hover .in-front
+		{
+			transform: rotateX(180deg);
+		}
+
+		.box:hover .back
+		{
+			transform: rotateX(0deg);
+		}
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+        <div class="box">
+            <div class="fb-front">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="back">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="twi-front">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="back">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insta-front">
+                <i class="fa-brands fa-instagram"></i>        
+            </div>
+            <div class="back">
+                <i class="fa-brands fa-instagram"></i>        
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="in-front">
+                <i class="fa-brands fa-linkedin-in"></i>        
+            </div>
+            <div class="back">
+                <i class="fa-brands fa-linkedin-in"></i>        
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
