@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30fdf6eef9.js" crossorigin="anonymous"></script>
+    <title>Elite shoppy task 3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box{
+            display: flex;
+            gap: 10px;
+        }
+        .box .logo{
+            width: 80px;
+            height: 80px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+        }
+        .fa-truck{
+            transform: rotateY(180deg);
+            z-index: 2;
+        }
+        .description .title{
+            color: #6BE5ED;
+            font-weight: bold;
+        }
+
+        .main-box{
+            position: relative;
+        }
+        .back{
+            position: absolute;
+            background-color: #6BE5ED;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .main-box:hover .back{
+            animation: anim 1s linear forwards ;
+            transform: scale(1.1);
+
+        }
+
+        @keyframes anim{
+            0%{
+                width: 0px;
+                height: 0px;
+            }
+            100%{
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+        <div class="box">
+            <div class="main-box">
+            <div class="logo">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="back">
+
+            </div>
+            </div>
+            <div class="description">
+                <p class="title">FREE SHIPPING</p>
+                <br>
+                <p>Lorem ipsum dolor, sit<br> amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="logo">
+                <i class="fa-solid fa-headphones"></i>
+            </div>
+            <div class="description">
+                <p class="title">24/7 SUPPORT</p>
+                <br>
+                <p>Lorem ipsum dolor, sit<br> amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="description">
+                <p class="title">MONEY BACK GUARANTEE</p>
+                <br>
+                <p>Lorem ipsum dolor, sit<br> amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="logo">
+                <i class="fa-solid fa-gift"></i>
+            </div>
+            <div class="description">
+                <p class="title">FREE GIFT COUPON</p>
+                <br>
+                <p>Lorem ipsum dolor, sit<br> amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
